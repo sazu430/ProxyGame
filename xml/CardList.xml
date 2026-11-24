@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CardList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:noNamespaceSchemaLocation="Card.xsd">
+    <Card id="0001"
+          type="Attack"
+          rarity="Common">
+          <Name>AttackTest</Name>
+          <ActionCost>1</ActionCost>
+          <Description>A simple attack card.</Description>
+    </Card>
+</CardList>

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d2nfdeng6j26b"]
+
+[node name="Main" type="Node" unique_id=1775395424]
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=335652169]
+
+[node name="Node3D" type="Node3D" parent="SubViewport" unique_id=380924428]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=360987756]
+
+[node name="Card" type="Node" parent="." unique_id=757584526]

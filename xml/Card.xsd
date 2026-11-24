@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name= "CardType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value = "Attack"/>
+            <xs:enumeration value = "Skill"/>
+            <xs:enumeration value = "Other"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name= "Rarity">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value = "Common"/>
+            <xs:enumeration value = "UnCommon"/>
+            <xs:enumeration value = "Rare"/>
+            <xs:enumeration value = "Epic"/>
+            <xs:enumeration value = "Legendary"/>
+            <xs:enumeration value = "Secret"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- カードの要素定義 -->
+    <xs:element name="Card">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Name" type="xs:string"/>
+                <xs:element name="ActionCost" type="xs:integer"/>
+                <xs:element name="Description" type="xs:string"/>
+                
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:integer" use="required"/>
+            <xs:attribute name="type" type="CardType" use="required"/>
+            <xs:attribute name="rarity" type="Rarity" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- 全体の定義 -->
+    <xs:element name ="CardList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref = "Card"
+                            minOccurs="0"
+                            maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+     </xs:element>
+</xs:schema>
