@@ -22,9 +22,9 @@
     <xs:element name="Card">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Name" type="xs:string"/>
-                <xs:element name="ActionCost" type="xs:integer"/>
-                <xs:element name="Description" type="xs:string"/>
+                <xs:element name="Name" type="xs:string" default="no_name"/>
+                <xs:element name="ActionCost" type="xs:integer" default="0"/>
+                <xs:element name="Description" type="xs:string" default="null"/>
                 
             </xs:sequence>
             <xs:attribute name="id" type="xs:integer" use="required"/>
